@@ -12,7 +12,7 @@ import { Code2, Briefcase, Award, Zap } from 'lucide-react';
 
 const stats = [
   { number: "40+", label: "Projects & Mini-Apps Built", icon: <Briefcase /> },
-  { number: "15+", label: "Technologies Used", icon: <Code2 /> },
+  { number: "12+", label: "Technologies Used", icon: <Code2 /> },
   { number: "2+ Years", label: "Development Experience", icon: <Award /> },
   { number: "100%", label: "Positive Project Feedback", icon: <Zap /> }
 ];
