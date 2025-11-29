@@ -34,7 +34,7 @@ const StatsSection = ({ visibleElements, stats }: StatsSectionProps) => {
               <div className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2">
                 {stat.number}
               </div>
-              stat.label
+              {stat.label}
               <div className="text-gray-400 text-sm">{stat.label}</div>
             </div>
           ))}

@@ -10,12 +10,12 @@ import { projects } from "./data/projects";
 import Education from "./components/Education";
 import { Code2, Briefcase, Award, Zap } from 'lucide-react';
 
-  const stats = [
-    { number: '50+', label: 'Projects Completed', icon: <Briefcase /> },
-    { number: '15+', label: 'Technologies', icon: <Code2 /> },
-    { number: '5+', label: 'Years Experience', icon: <Award /> },
-    { number: '100%', label: 'Client Satisfaction', icon: <Zap /> }
-  ];
+const stats = [
+  { number: "40+", label: "Projects & Mini-Apps Built", icon: <Briefcase /> },
+  { number: "15+", label: "Technologies Used", icon: <Code2 /> },
+  { number: "2+ Years", label: "Development Experience", icon: <Award /> },
+  { number: "100%", label: "Positive Project Feedback", icon: <Zap /> }
+];
 
 function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
