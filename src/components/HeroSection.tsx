@@ -26,7 +26,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ visibleElements }) => {
         <a href="https://github.com/TryAgain1122" className="hover:text-cyan-400 transition">
           <Github size={28} />
         </a>
-        <a href="#" className="hover:text-blue-400 transition">
+        <a href="https://www.linkedin.com/in/rafhael-luis-25ba0525b/" className="hover:text-blue-400 transition">
           <Linkedin size={28} />
         </a>
         <a href="#" className="hover:text-pink-400 transition">
