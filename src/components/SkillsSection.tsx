@@ -1,3 +1,18 @@
+import {
+  SiReact,
+  SiNextdotjs,
+  SiTypescript,
+  SiNodedotjs,
+  SiSpringboot,
+  SiCplusplus,
+  SiPostgresql,
+  SiMongodb,
+  SiTailwindcss,
+  SiRedux,
+  SiMysql
+} from 'react-icons/si';
+import { FaJava } from 'react-icons/fa';
+import type { IconType } from 'react-icons';
 
 interface Skill {
   name: string;
@@ -10,6 +25,21 @@ interface SkillsSectionProps {
   visibleElements: Set<string>;
   skills: Skill[];
 }
+
+const iconMap: Record<string, IconType> = {
+  react: SiReact,
+  nextjs: SiNextdotjs,
+  typescript: SiTypescript,
+  nodejs: SiNodedotjs,
+  springboot: SiSpringboot,
+  java: FaJava,
+  cplusplus: SiCplusplus,
+  postgresql: SiPostgresql,
+  mongodb: SiMongodb,
+  tailwindcss: SiTailwindcss,
+  redux: SiRedux,
+  mysql: SiMysql,
+};
 
 export default function SkillsSection({ visibleElements, skills }: SkillsSectionProps) {
   return (
@@ -43,7 +73,10 @@ export default function SkillsSection({ visibleElements, skills }: SkillsSection
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
-                  <span className="text-3xl">{skill.icon}</span>
+                  {(() => {
+                    const IconComponent = iconMap[skill.icon];
+                    return IconComponent ? <IconComponent className="text-3xl" /> : <span className="text-3xl">{skill.icon}</span>;
+                  })()}
                   <span className="text-3xl font-semibold">{skill.name}</span>
                 </div>
                 <span className="text-cyan-400 font-bold">{skill.level}%</span>

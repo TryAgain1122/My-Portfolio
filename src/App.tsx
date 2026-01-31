@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Routes, Route } from "react-router-dom"
 import FloatingParticles from "./components/FloatingParticles"
 import ProgressBar from "./components/ProgressBar"
 import HeroSection from "./components/HeroSection";
@@ -8,16 +9,18 @@ import StatsSection from "./components/StatsSection";
 import ProjectSection from "./components/ProjectSection";
 import { projects } from "./data/projects";
 import Education from "./components/Education";
+import ProjectDetail from "./pages/ProjectDetail";
 import { Code2, Briefcase, Award, Zap } from 'lucide-react';
 
 const stats = [
-  { number: "40+", label: "Projects & Mini-Apps Built", icon: <Briefcase /> },
-  { number: "12+", label: "Technologies Used", icon: <Code2 /> },
-  { number: "2+ Years", label: "Development Experience", icon: <Award /> },
-  { number: "100%", label: "Positive Project Feedback", icon: <Zap /> }
+  { number: "12+", label: "Web Projects Built", icon: <Briefcase /> },
+  { number: "8+", label: "Frontend Tools Used", icon: <Code2 /> },
+  { number: "5+", label: "Backend Tools Used", icon: <Award /> },
+  { number: "3", label: "Team Projects Completed", icon: <Zap /> }
 ];
 
-function App() {
+
+function HomePage() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [visibleElements, setVisibleElements] = useState<Set<string>>(new Set());
 
@@ -49,7 +52,16 @@ function App() {
       <SkillsSection visibleElements={visibleElements} skills={skills}/>
       <ProjectSection visibleElements={visibleElements} projects={projects}/>
       <Education visibleElements={visibleElements}/>
-      </div>
+    </div>
+  )
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/project/:slug" element={<ProjectDetail />} />
+    </Routes>
   )
 }
 

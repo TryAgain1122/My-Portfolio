@@ -4,7 +4,7 @@ export interface Stat {
 }
 
 export const stats: Stat[] = [
-  { label: 'Projects', value: '12+' },
-  { label: 'Clients', value: '8+' },
-  { label: 'Experience', value: '3 yrs' },
+  { label: 'Projects & Mini-Apps', value: '15+' },
+  { label: 'Technologies Used', value: '10+' },
+  { label: 'Experience', value: '2+ yrs' },
 ];
