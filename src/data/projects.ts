@@ -8,6 +8,8 @@ export interface Project {
   delay: string;
   github?: string;
   live?: string;
+  /** Optional screenshot path (e.g. "/projects/staycation.png" in /public). Falls back to a styled preview. */
+  image?: string;
   features: string[];
 }
 

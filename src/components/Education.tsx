@@ -1,124 +1,76 @@
 import { GraduationCap } from "lucide-react";
+import SectionHeading from "./SectionHeading";
+import Reveal from "./Reveal";
 
-interface EducationProps {
-  visibleElements: Set<string>;
+interface EducationEntry {
+  degree: string;
+  school: string;
+  period: string;
+  certificates?: string[];
 }
 
-const Education = ({ visibleElements }: EducationProps) => {
+const education: EducationEntry[] = [
+  {
+    degree: "BS in Information Technology",
+    school: "AMA University",
+    period: "2019 — 2025",
+    certificates: [
+      "Dean's Lister",
+      "Programming Essentials in C++",
+      "Advanced Programming in C++",
+      "Introduction to Networks",
+      "Switching, Routing and Wireless Essentials",
+      "Enterprise Networking, Security and Automation",
+    ],
+  },
+  {
+    degree: "High School & Senior High School",
+    school: "Sta. Lucia HS / STI Novaliches",
+    period: "2013 — 2019",
+  },
+  {
+    degree: "Elementary",
+    school: "New Era University",
+    period: "2005 — 2013",
+  },
+];
+
+const Education = () => {
   return (
-    <section id="education" className="py-20 px-6">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <h2
-            id="education-title"
-            data-animate
-            className={`text-5xl md:text-6xl font-bold mb-6 ${
-              visibleElements.has("education-title")
-                ? "animate-slide-up"
-                : "opacity-0"
-            }`}
-          >
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Education
-            </span>
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto animate-expand" />
-        </div>
+    <section id="education" className="px-6 py-20 md:py-24">
+      <div className="mx-auto max-w-4xl">
+        <SectionHeading eyebrow="Education" title="Academic background" />
 
-        <div className="space-y-7">
-          {/* one */}
-          <div
-            id="education-card"
-            data-animate
-            className={`relative bg-gradient-to-br from-gray-900 to-gray-950 p-10 rounded-3xl border border-gray-800 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 ${
-              visibleElements.has("education-card")
-                ? "animate-slide-up"
-                : "opacity-0"
-            }`}
-          >
-            <div className="absolute -top-6 left-10 p-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl shadow-2xl animate-bounce-slow">
-              <GraduationCap size={32} />
-            </div>
-
-            <div className="mt-8">
-              <h3 className="text-3xl font-bold mb-3 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Bachelor of Science in Information Technology
-              </h3>
-              <p className="text-xl text-cyan-400 font-semibold mb-2">
-                AMA University
-              </p>
-              <p className="text-gray-500 mb-3">2019 - 2025</p>
-               <p className="text-gray-500 mb-6 font-semibold text-2xl">Certificates & Achievements</p>
-              
-              <div className="space-y-3">
-                {[
-                  "Dean's Lister",
-                  "Programming Essentials in C++",
-                  "Advanced Programming in C++",
-                  "Introduction to Networks", 
-                  "Switching Routings and Wireless Esseintials",
-                  "Enterprise Networking, Security and Automation"
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 group">
-                    <div className="mt-1.5 w-2 h-2 bg-cyan-500 rounded-full group-hover:scale-150 transition-transform duration-300" />
-                    <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                      {item}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-          {/* two */}
-          <div
-            id="education-card"
-            data-animate
-            className={`relative bg-gradient-to-br from-gray-900 to-gray-950 p-10 rounded-3xl border border-gray-800 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 ${
-              visibleElements.has("education-card")
-                ? "animate-slide-up"
-                : "opacity-0"
-            }`}
-          >
-            <div></div>
-            <div className="absolute -top-6 left-10 p-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl shadow-2xl animate-bounce-slow">
-              <GraduationCap size={32} />
-            </div>
-
-            <div className="mt-8">
-              <h3 className="text-3xl font-bold mb-3 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">  
-                High School & Senior High School       
-              </h3>
-              <p className="text-xl text-cyan-400 font-semibold mb-2">
-                STA LUCIA HS / STI NOVALICHES 
-              </p>
-              <p className="text-gray-500 mb-6">2013 - 2019</p>
-            </div>
-          </div>
-          {/* Three */}
-           <div
-            id="education-card"
-            data-animate
-            className={`relative bg-gradient-to-br from-gray-900 to-gray-950 p-10 rounded-3xl border border-gray-800 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 ${
-              visibleElements.has("education-card")
-                ? "animate-slide-up"
-                : "opacity-0"
-            }`}
-          >
-            <div className="absolute -top-6 left-10 p-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl shadow-2xl animate-bounce-slow">
-              <GraduationCap size={32} />
-            </div>
-
-            <div className="mt-8">
-              <h3 className="text-3xl font-bold mb-3 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Elementary
-              </h3>
-              <p className="text-xl text-cyan-400 font-semibold mb-2">
-                New Era University
-              </p>
-              <p className="text-gray-500 mb-6">2005 - 2013</p>
-            </div>
-          </div>
-        </div>
+        <ol className="relative ml-3 space-y-10 border-l border-slate-200">
+          {education.map((entry, i) => (
+            <li key={entry.degree} className="pl-8">
+              <Reveal delay={i * 0.08}>
+                <span className="absolute -left-[13px] flex h-[26px] w-[26px] items-center justify-center rounded-full border border-indigo-200 bg-white text-indigo-600">
+                  <GraduationCap size={13} />
+                </span>
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 className="text-base font-bold tracking-tight text-slate-900">
+                    {entry.degree}
+                  </h3>
+                  <span className="text-xs font-semibold text-slate-400">{entry.period}</span>
+                </div>
+                <p className="mt-1 text-sm font-medium text-slate-500">{entry.school}</p>
+                {entry.certificates && (
+                  <ul className="mt-4 flex flex-wrap gap-2">
+                    {entry.certificates.map((cert) => (
+                      <li
+                        key={cert}
+                        className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-600"
+                      >
+                        {cert}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </Reveal>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );
