@@ -7,7 +7,7 @@ interface SectionHeadingProps {
 }
 
 const SectionHeading = ({ eyebrow, title, description }: SectionHeadingProps) => (
-  <Reveal className="mb-14 max-w-2xl">
+  <Reveal className="mb-10 max-w-2xl md:mb-14">
     <span className="eyebrow">{eyebrow}</span>
     <h2 className="mt-5 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
       {title}

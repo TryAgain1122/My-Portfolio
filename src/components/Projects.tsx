@@ -21,7 +21,7 @@ const ProjectPreview = ({ project }: { project: Project }) => (
       <span className="h-2.5 w-2.5 rounded-full bg-slate-300" />
       <span className="h-2.5 w-2.5 rounded-full bg-slate-300" />
       <span className="h-2.5 w-2.5 rounded-full bg-slate-300" />
-      <span className="ml-2 truncate rounded-md bg-white px-2.5 py-0.5 text-[11px] font-medium text-slate-400">
+      <span className="ml-2 min-w-0 truncate rounded-md bg-white px-2.5 py-0.5 text-[11px] font-medium text-slate-400">
         {domainOf(project.live || project.github)}
       </span>
     </div>
@@ -48,7 +48,7 @@ const ProjectPreview = ({ project }: { project: Project }) => (
 
 const Projects = ({ projects }: { projects: Project[] }) => {
   return (
-    <section id="projects" className="px-6 py-20 md:py-28">
+    <section id="projects" className="px-6 py-14 sm:py-20 md:py-28">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           eyebrow="Projects"
@@ -56,13 +56,13 @@ const Projects = ({ projects }: { projects: Project[] }) => {
           description="Production platforms, team builds and experiments — each with source code and, where available, a live deployment."
         />
 
-        <div className="grid gap-7 md:grid-cols-2">
+        <div className="grid gap-5 sm:gap-7 md:grid-cols-2">
           {projects.map((project, i) => (
-            <Reveal key={project.slug} delay={(i % 2) * 0.08}>
+            <Reveal key={project.slug} delay={(i % 2) * 0.08} className="min-w-0">
               <article className="card card-hover group flex h-full flex-col overflow-hidden">
                 <ProjectPreview project={project} />
 
-                <div className="flex flex-1 flex-col p-7">
+                <div className="flex flex-1 flex-col p-5 sm:p-7">
                   <h3 className="text-lg font-bold tracking-tight text-slate-900">
                     {project.title}
                   </h3>
@@ -81,7 +81,7 @@ const Projects = ({ projects }: { projects: Project[] }) => {
                     ))}
                   </ul>
 
-                  <div className="mt-auto flex flex-wrap items-center gap-4 pt-6 text-sm font-semibold">
+                  <div className="mt-auto flex flex-wrap items-center gap-x-4 gap-y-2.5 pt-6 text-sm font-semibold">
                     {project.github && (
                       <a
                         href={project.github}

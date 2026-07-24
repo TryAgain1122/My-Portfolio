@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="px-6 py-20 md:py-28">
+    <section id="experience" className="px-6 py-14 sm:py-20 md:py-28">
       <div className="mx-auto max-w-4xl">
         <SectionHeading
           eyebrow="Experience"
@@ -16,10 +16,10 @@ const ExperienceSection = () => {
         <div className="space-y-7">
           {experience.map((job, i) => (
             <Reveal key={job.company} delay={i * 0.08}>
-              <article className="card card-hover p-8 md:p-10">
+              <article className="card card-hover p-5 sm:p-8 md:p-10">
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div>
-                    <h3 className="text-xl font-bold tracking-tight text-slate-900">
+                    <h3 className="text-lg font-bold tracking-tight text-slate-900 sm:text-xl">
                       {job.role}
                     </h3>
                     <p className="mt-1 text-sm font-semibold text-indigo-600">

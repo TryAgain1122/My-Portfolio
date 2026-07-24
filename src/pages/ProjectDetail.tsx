@@ -39,7 +39,7 @@ export default function ProjectDetail() {
     <div className="min-h-screen overflow-x-hidden">
       <GradientBackdrop />
 
-      <main className="mx-auto max-w-4xl px-6 pt-10 pb-20">
+      <main className="mx-auto max-w-4xl px-6 pt-8 pb-16 md:pt-10 md:pb-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ export default function ProjectDetail() {
           {/* Header */}
           <header className="mt-10">
             <span className="eyebrow">Case study</span>
-            <h1 className="mt-5 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
+            <h1 className="mt-5 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
               {project.title}
             </h1>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-600 md:text-lg">
@@ -96,7 +96,7 @@ export default function ProjectDetail() {
           className="mt-12 space-y-7"
         >
           {/* Overview */}
-          <section className="card p-8 md:p-10">
+          <section className="card p-5 sm:p-8 md:p-10">
             <h2 className="text-lg font-bold tracking-tight text-slate-900">
               About this project
             </h2>
@@ -104,7 +104,7 @@ export default function ProjectDetail() {
           </section>
 
           {/* Tech */}
-          <section className="card p-8 md:p-10">
+          <section className="card p-5 sm:p-8 md:p-10">
             <h2 className="text-lg font-bold tracking-tight text-slate-900">Tech stack</h2>
             <ul className="mt-5 flex flex-wrap gap-2">
               {project.tech.map((tech) => (
@@ -119,7 +119,7 @@ export default function ProjectDetail() {
           </section>
 
           {/* Features */}
-          <section className="card p-8 md:p-10">
+          <section className="card p-5 sm:p-8 md:p-10">
             <h2 className="text-lg font-bold tracking-tight text-slate-900">
               Key features
             </h2>

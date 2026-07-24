@@ -14,14 +14,7 @@ const education: EducationEntry[] = [
     degree: "BS in Information Technology",
     school: "AMA University",
     period: "2019 — 2025",
-    certificates: [
-      "Dean's Lister",
-      "Programming Essentials in C++",
-      "Advanced Programming in C++",
-      "Introduction to Networks",
-      "Switching, Routing and Wireless Essentials",
-      "Enterprise Networking, Security and Automation",
-    ],
+    certificates: ["Dean's Lister"],
   },
   {
     degree: "High School & Senior High School",
@@ -37,7 +30,7 @@ const education: EducationEntry[] = [
 
 const Education = () => {
   return (
-    <section id="education" className="px-6 py-20 md:py-24">
+    <section id="education" className="px-6 py-14 sm:py-20 md:py-24">
       <div className="mx-auto max-w-4xl">
         <SectionHeading eyebrow="Education" title="Academic background" />
 
@@ -56,15 +49,23 @@ const Education = () => {
                 </div>
                 <p className="mt-1 text-sm font-medium text-slate-500">{entry.school}</p>
                 {entry.certificates && (
-                  <ul className="mt-4 flex flex-wrap gap-2">
+                  <ul className="mt-4 flex flex-wrap items-center gap-2">
                     {entry.certificates.map((cert) => (
                       <li
                         key={cert}
-                        className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-600"
+                        className="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-medium text-amber-700"
                       >
                         {cert}
                       </li>
                     ))}
+                    <li>
+                      <a
+                        href="#certifications"
+                        className="rounded-full border border-indigo-200 bg-indigo-50/60 px-3 py-1 text-xs font-semibold text-indigo-700 transition-colors hover:bg-indigo-100"
+                      >
+                        11 Cisco certifications ↓
+                      </a>
+                    </li>
                   </ul>
                 )}
               </Reveal>

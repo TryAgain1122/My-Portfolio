@@ -19,19 +19,19 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="px-6 py-20 md:py-28">
+    <section id="contact" className="px-6 py-14 sm:py-20 md:py-28">
       <div className="mx-auto max-w-4xl">
-        <div className="card overflow-hidden p-10 text-center md:p-16">
+        <div className="card overflow-hidden p-6 text-center sm:p-10 md:p-16">
           <SectionHeadingCentered />
 
           <Reveal delay={0.1}>
-            <div className="mx-auto mt-8 flex max-w-md items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-slate-50/80 py-2 pr-2 pl-5">
-              <span className="truncate text-sm font-medium text-slate-700 md:text-base">
+            <div className="mx-auto mt-8 flex max-w-md flex-col gap-2 rounded-2xl border border-slate-200 bg-slate-50/80 p-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3 sm:py-2 sm:pr-2 sm:pl-5">
+              <span className="truncate px-3 pt-1.5 text-sm font-medium text-slate-700 sm:p-0 md:text-base">
                 {EMAIL}
               </span>
               <button
                 onClick={copyEmail}
-                className={`inline-flex shrink-0 items-center gap-1.5 rounded-xl px-4 py-2.5 text-sm font-semibold transition-all ${
+                className={`inline-flex shrink-0 items-center justify-center gap-1.5 rounded-xl px-4 py-2.5 text-sm font-semibold transition-all ${
                   copied
                     ? "bg-emerald-100 text-emerald-700"
                     : "bg-slate-900 text-white hover:bg-indigo-600"
@@ -87,7 +87,7 @@ const Contact = () => {
 const SectionHeadingCentered = () => (
   <Reveal>
     <span className="eyebrow">Contact</span>
-    <h2 className="mt-5 text-3xl font-bold tracking-tight text-slate-900 md:text-5xl">
+    <h2 className="mt-5 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl md:text-5xl">
       Let&apos;s build something{" "}
       <span className="gradient-ink">great together.</span>
     </h2>

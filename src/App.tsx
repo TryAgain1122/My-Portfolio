@@ -6,6 +6,7 @@ import TechStack from "./components/TechStack";
 import Projects from "./components/Projects";
 import ExperienceSection from "./components/ExperienceSection";
 import Education from "./components/Education";
+import Certificates from "./components/Certificates";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ProjectDetail from "./pages/ProjectDetail";
@@ -22,6 +23,7 @@ function HomePage() {
         <Projects projects={projects} />
         <ExperienceSection />
         <Education />
+        <Certificates />
         <Contact />
       </main>
       <Footer />

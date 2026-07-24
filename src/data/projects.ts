@@ -64,6 +64,7 @@ export const projects: Project[] = [
     delay: "0.1s",
     github: "https://github.com/TryAgain1122/MDB-Web-App",
     live: "https://mdb-web-app.vercel.app",
+    image: "/projects/mdb-movie-app.png",
     features: [
       "Real-time movie search functionality",
       "API integration for movie data",
@@ -82,6 +83,7 @@ export const projects: Project[] = [
     delay: "0.2s",
     github: "https://github.com/TryAgain1122/guess-my-number",
     live: "https://guess-my-number-beryl-six.vercel.app",
+    image: "/projects/guess-my-number.png",
     features: [
       "Random number generation",
       "User input validation",
@@ -100,6 +102,7 @@ export const projects: Project[] = [
     delay: "0.3s",
     github: "https://github.com/TryAgain1122/food-ordering-app",
     live: "https://food-ordering-app-lake.vercel.app/",
+    image: "/projects/react-meals.png",
     features: [
       "Dynamic menu display",
       "Shopping cart functionality",
@@ -119,6 +122,7 @@ export const projects: Project[] = [
     delay: "0.4s",
     github: "https://github.com/TryAgain1122/LE-SSERAFIM-FAN-PAGE",
     live: "https://le-sserafim-fan-page.vercel.app",
+    image: "/projects/le-sserafim.png",
     features: [
       "Member profile showcases",
       "Discography section",
@@ -138,6 +142,7 @@ export const projects: Project[] = [
     delay: "0.45s",
     github: "https://github.com/TryAgain1122/Karina-landing-page-",
     live: "https://aespa-world.vercel.app",
+    image: "/projects/aespa-karina.png",
     features: [
       "Hero section with parallax effects",
       "Smooth scroll animations",
@@ -155,7 +160,8 @@ export const projects: Project[] = [
     gradient: "from-rose-600 via-pink-600 to-purple-600",
     delay: "0.46s",
     github: "https://github.com/TryAgain1122/For-Couple-web-page",
-    live: "",
+    live: "https://for-couple-web.vercel.app",
+    image: "/projects/couple-monthsary.png",
     features: [
       "Romantic theme and design",
       "Photo memory gallery",

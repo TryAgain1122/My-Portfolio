@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 
 const TechStack = () => {
   return (
-    <section id="tech" className="px-6 py-20 md:py-28">
+    <section id="tech" className="px-6 py-14 sm:py-20 md:py-28">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           eyebrow="Tech stack"
@@ -12,10 +12,10 @@ const TechStack = () => {
           description="No percentages, no self-ratings — just the technologies I use to design, build and run software in production."
         />
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
           {techCategories.map((category, i) => (
-            <Reveal key={category.title} delay={(i % 3) * 0.08}>
-              <div className="card card-hover h-full p-7">
+            <Reveal key={category.title} delay={(i % 3) * 0.08} className="min-w-0">
+              <div className="card card-hover h-full p-5 sm:p-7">
                 <h3 className="text-base font-bold tracking-tight text-slate-900">
                   {category.title}
                 </h3>

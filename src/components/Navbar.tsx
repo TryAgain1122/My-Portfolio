@@ -6,6 +6,7 @@ const links = [
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
   { label: "Education", href: "#education" },
+  { label: "Certifications", href: "#certifications" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -23,7 +24,7 @@ const Navbar = () => {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
+        scrolled || open
           ? "border-b border-slate-200/70 bg-white/70 backdrop-blur-xl"
           : "bg-transparent"
       }`}
@@ -65,7 +66,7 @@ const Navbar = () => {
       </nav>
 
       {open && (
-        <div className="border-t border-slate-200/70 bg-white/95 px-6 py-4 backdrop-blur-xl md:hidden">
+        <div className="max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-slate-200/70 bg-white/95 px-6 py-4 shadow-lg backdrop-blur-xl md:hidden">
           <div className="flex flex-col gap-1">
             {links.map((link) => (
               <a

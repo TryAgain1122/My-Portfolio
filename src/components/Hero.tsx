@@ -47,7 +47,7 @@ const fadeUp = (delay: number) => ({
 
 const Hero = () => {
   return (
-    <section id="top" className="relative px-6 pt-36 pb-20 md:pt-44 md:pb-28">
+    <section id="top" className="relative px-6 pt-28 pb-16 sm:pt-36 sm:pb-20 md:pt-44 md:pb-28">
       <div className="mx-auto grid max-w-6xl items-center gap-16 lg:grid-cols-[1.2fr_0.8fr]">
         {/* Copy */}
         <div>
@@ -116,7 +116,7 @@ const Hero = () => {
 
           <motion.dl
             {...fadeUp(0.4)}
-            className="mt-12 grid max-w-xl grid-cols-2 gap-x-8 gap-y-6 border-t border-slate-200/80 pt-8 sm:grid-cols-4"
+            className="mt-10 grid max-w-xl grid-cols-2 gap-x-6 gap-y-6 border-t border-slate-200/80 pt-7 sm:grid-cols-4 sm:gap-x-8 md:mt-12 md:pt-8"
           >
             {stats.map((stat) => (
               <div key={stat.label}>

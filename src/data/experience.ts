@@ -14,6 +14,37 @@ export interface Experience {
 
 export const experience: Experience[] = [
   {
+    role: "Full Stack Engineer",
+    company: "DreamNext Technologies",
+    period: "2026 — Present",
+    type: "Team · Production",
+    summary:
+      "Built and maintained a production-scale commerce ecosystem consisting of a multi-portal e-commerce platform, affiliate system, supplier and partner portals, a real-time community platform, and supporting cloud infrastructure.",
+    highlights: [
+      "Developed full-stack features across Next.js, Node.js (Hono.js), and Laravel applications",
+      "Built and maintained business modules including checkout, shipping, payments, KYC verification, encashment, supplier management, notifications, and affiliate workflows",
+      "Developed a real-time community platform with social feeds, messaging, notifications, events, and user presence using Socket.IO, Redis, Prisma, and PostgreSQL",
+      "Integrated third-party services including PayMongo, XDE Courier, ZQ (1688 Product Sourcing API), Cloudinary, Google Gemini AI, and Meilisearch — enabling payment processing, logistics, product synchronization, media management, AI-powered support, and search capabilities",
+      "Contributed to Dockerized deployments, CI/CD pipelines, production infrastructure, debugging, testing, and system maintenance using GitHub Actions, GHCR, and Dokploy",
+    ],
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Hono.js",
+      "Laravel",
+      "PHP",
+      "Prisma",
+      "PostgreSQL",
+      "Redis",
+      "Socket.IO",
+      "Docker",
+      "GitHub Actions",
+      "Tailwind CSS",
+    ],
+  },
+  {
     role: "Full Stack Developer",
     company: "Staycation Haven PH",
     period: "2024 — 2025",
