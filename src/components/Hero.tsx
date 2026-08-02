@@ -73,10 +73,13 @@ const Hero = () => {
             {...fadeUp(0.16)}
             className="mt-6 max-w-xl text-base leading-relaxed text-slate-600 md:text-lg"
           >
-            I&apos;m Rafhael Luis — a software engineer specializing in Full Stack
-            development, Cloud and DevOps. I ship production systems with React,
-            Next.js, Laravel and Spring Boot, and run them on Docker, AWS and
-            modern CI/CD.
+            I build modern web applications, scalable backend systems,
+            and cloud infrastructure using Laravel, Next.js, TypeScript,
+            PostgreSQL, Docker, and AWS.
+            <br />
+            <br />
+            Currently exploring AI engineering, Retrieval-Augmented
+            Generation (RAG), and intelligent developer tools.
           </motion.p>
 
           <motion.div {...fadeUp(0.24)} className="mt-8 flex flex-wrap items-center gap-3">
