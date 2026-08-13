@@ -191,4 +191,30 @@ export const projects: Project[] = [
       "Responsive design for all devices"
     ]
   },
+  {
+    slug: "af-home",
+    title: "AF Home",
+    desc: "A modern e-commerce platform for seamless online shopping, affiliate marketing, voucher management, and nationwide shipping integration.",
+    fullDesc: "AF Home is a modern e-commerce platform designed for seamless online shopping, affiliate marketing, voucher management, and nationwide shipping integration. It provides customers with a fast and secure shopping experience while giving administrators powerful tools to manage products, orders, promotions, and fulfillment.",
+    tech: ["Next.js", "TypeScript", "Laravel", "PostgreSQL", "Tailwind CSS", "Docker"],
+    gradient: "from-sky-600 via-indigo-600 to-violet-600",
+    delay: "0.55s",
+    live: "https://afhome.ph",
+    image: "/projects/afhome.png",
+    features: [
+      "Customer authentication",
+      "Product catalog",
+      "Shopping cart",
+      "Checkout flow",
+      "Affiliate referral system",
+      "Voucher management",
+      "Shipping rate calculation",
+      "Order tracking",
+      "Admin dashboard",
+      "Inventory management",
+      "Sales reports",
+      "Payment integration",
+      "Responsive design"
+    ]
+  },
 ];

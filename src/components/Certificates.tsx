@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Award, ExternalLink, Eye, X } from "lucide-react";
+import { Award, ExternalLink, Eye, GraduationCap, X } from "lucide-react";
 import { SiCisco } from "react-icons/si";
 import { certificates, type Certificate } from "../data/certificates";
 import SectionHeading from "./SectionHeading";
@@ -33,6 +33,9 @@ const CertificateModal = ({
     };
   }, [onClose]);
 
+  const isImage = /\.(png|jpe?g|webp)$/i.test(cert.file);
+  const isCisco = cert.issuer.toLowerCase().includes("cisco");
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -52,7 +55,11 @@ const CertificateModal = ({
       >
         <div className="flex items-center justify-between gap-4 border-b border-slate-200 px-5 py-3.5">
           <div className="flex min-w-0 items-center gap-3">
-            <SiCisco size={22} color="#1BA0D7" className="shrink-0" />
+            {isCisco ? (
+              <SiCisco size={22} color="#1BA0D7" className="shrink-0" />
+            ) : (
+              <GraduationCap size={22} className="shrink-0 text-indigo-600" />
+            )}
             <div className="min-w-0">
               <p className="truncate text-sm font-bold text-slate-900">{cert.title}</p>
               <p className="text-xs text-slate-500">
@@ -81,29 +88,39 @@ const CertificateModal = ({
         </div>
 
         <div className="flex-1 bg-slate-100">
-          <object
-            data={`${cert.file}#toolbar=0&navpanes=0&view=FitH`}
-            type="application/pdf"
-            className="h-full w-full"
-          >
-            {/* Fallback for browsers that can't embed PDFs (most mobile) */}
-            <div className="flex h-full flex-col items-center justify-center gap-4 p-8 text-center">
-              <Award size={36} className="text-slate-400" />
-              <p className="max-w-sm text-sm text-slate-600">
-                This browser can&apos;t preview PDFs inline — open the
-                certificate in a new tab instead.
-              </p>
-              <a
-                href={cert.file}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
-                <ExternalLink size={16} />
-                Open certificate
-              </a>
+          {isImage ? (
+            <div className="flex h-full w-full items-center justify-center overflow-auto p-4">
+              <img
+                src={cert.file}
+                alt={cert.title}
+                className="max-h-full max-w-full rounded-lg object-contain shadow-sm"
+              />
             </div>
-          </object>
+          ) : (
+            <object
+              data={`${cert.file}#toolbar=0&navpanes=0&view=FitH`}
+              type="application/pdf"
+              className="h-full w-full"
+            >
+              {/* Fallback for browsers that can't embed PDFs (most mobile) */}
+              <div className="flex h-full flex-col items-center justify-center gap-4 p-8 text-center">
+                <Award size={36} className="text-slate-400" />
+                <p className="max-w-sm text-sm text-slate-600">
+                  This browser can&apos;t preview PDFs inline — open the
+                  certificate in a new tab instead.
+                </p>
+                <a
+                  href={cert.file}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  <ExternalLink size={16} />
+                  Open certificate
+                </a>
+              </div>
+            </object>
+          )}
         </div>
       </motion.div>
     </motion.div>
@@ -135,8 +152,10 @@ const Certificates = () => {
                   <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200/80 bg-white">
                     {cert.category === "Award" ? (
                       <Award size={20} className="text-amber-500" />
-                    ) : (
+                    ) : cert.issuer.toLowerCase().includes("cisco") ? (
                       <SiCisco size={22} color="#1BA0D7" />
+                    ) : (
+                      <GraduationCap size={20} className="text-indigo-600" />
                     )}
                   </span>
                   <span
